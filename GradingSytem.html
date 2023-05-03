@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./bootstrap-5.3.0-alpha1-dist/css/bootstrap.css"> -->
+    <!-- <link rel="stylesheet" h"> -->
+    <link rel="stylesheet" href="./GradingSystem.css">
+    <link rel="stylesheet" href="./GradingResponsive.css">
+</head>
+<body>
+    <section class="Grading">
+        <h1 style="text-decoration: underline;">GRADING SCORE</h1>
+        <input type="text" id="gradeMe" placeholder="Type ur Score">
+        <button onclick="gradeMe()">Grade</button>
+        <div id="showUp"></div>
+        
+    </section>
+
+    <script>
+        function gradeMe() {
+            var scoreOfUser = document.getElementById("gradeMe");
+            var gradeMe = scoreOfUser.value;
+            var songExcellent = new Audio("Audio/Excellent.mp3")
+            var songVeryGood = new Audio("Audio/very good.mp3")
+            var songGood = new Audio("Audio/average.mp3")
+            var songAVerage  = new Audio("Audio/good.mp3")
+            var songFail  = new Audio("Audio/Fail.mp3")
+
+            if(gradeMe >=70 && gradeMe <=100) {
+                // console.log("Excellent")
+                showUp.innerHTML = "Excellent";
+                showUp.style.color ="white"
+                songExcellent.play();
+            } else if (gradeMe >=60 && gradeMe<70) {
+                showUp.innerHTML ="Very Good"
+                showUp.style.color ="orange"
+                songVeryGood.play();
+            } else if (gradeMe >=50 && gradeMe <60) {
+                showUp.innerHTML ="Good"
+                showUp.style.color ="black"
+                songGood.play()
+            } else if (gradeMe >=45 && gradeMe <50) {
+                showUp.innerHTML ="Average"
+                showUp.style.color ="orange"
+                songAVerage.play();
+            } else if (gradeMe >=39 && gradeMe <=44) {
+                showUp.innerHTML ="Poor,"
+                showUp.style.color ="yellow"
+                songFail.play();
+            } else if (gradeMe>=0 && gradeMe <39) {
+                showUp.innerHTML ="Fail,"
+                showUp.style.color ="yellow"
+                songFail.play();
+            } else{
+                showUp.innerHTML = "INVALID"
+                showUp.style.color ="black"
+                // showUp.innerHTML = 
+            }
+        }
+    </script>
+
+
+    <!-- <script src="./bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script> -->
+    <!-- <script src="./bootstrap-5.3.0-alpha1-dist/js/bootstrap.js"></script> -->
+</body>
+</html>

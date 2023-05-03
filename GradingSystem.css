@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 385px;
+    background-image: url(./Foto/Solar-Roof-Hero-Desktop-Global\ \(1\).webp);
+    background-size: cover;
+
+}
+.Grading{
+    /* border: 2px solid red; */
+    width: 28%;
+    padding: 30px;
+    height: 200px;
+    border-radius: 5px;
+    margin: 220px auto;
+    background-color: white;
+    box-shadow: rgb(60, 57, 57) 0px 15px 10px -2px;
+    animation-name: Grading;
+    animation-duration: 5s;
+}
+@keyframes Grading {
+    0%{
+        transform: translateY(-400px);
+    }
+    100%{
+        transform: translateY(50px);
+    }
+}
+.Grading div{
+    width: 90%;
+    text-align: center;
+    height: 40px;
+    padding: 8px;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: background-color 2s, transform 1s linear;
+    background-color: orangered;
+}
+.Grading div:hover{
+    background-color: white;
+    /* transform: rotate(360deg); */
+}
+
+.Grading input{
+    width: 70%;
+    border: 2px solid pink ;
+    padding: 10px;
+
+}
+.Grading button{
+    border: 1px solid red;
+    padding: 10px;  
+    border-radius: 5px;
+    width: 70px;
+}
+.Grading h1{
+    margin-left: 25px;
+    padding: 10px ;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
